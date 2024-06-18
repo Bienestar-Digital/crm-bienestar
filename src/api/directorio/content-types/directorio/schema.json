@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "directorios",
+  "info": {
+    "singularName": "directorio",
+    "pluralName": "directorios",
+    "displayName": "Directorio"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Area": {
+      "type": "string"
+    },
+    "Nombre": {
+      "type": "string"
+    },
+    "Telefono": {
+      "type": "string"
+    },
+    "Correo": {
+      "type": "string"
+    }
+  }
+}

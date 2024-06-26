@@ -12,22 +12,22 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Video": {
+    "video": {
       "type": "string"
     },
-    "QuienesSomos": {
+    "quienesSomos": {
       "type": "text"
     },
-    "QueQueremosSer": {
+    "queQueremosSer": {
       "type": "text"
     },
-    "Politicas": {
+    "politicas": {
       "type": "text"
     },
-    "Principios": {
+    "principios": {
       "type": "text"
     },
-    "Estructura": {
+    "estructura": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -43,7 +43,7 @@
     "CSU": {
       "type": "richtext"
     },
-    "Rectoria": {
+    "rectoria": {
       "type": "richtext"
     },
     "CBU": {
@@ -52,7 +52,7 @@
     "DNBU": {
       "type": "richtext"
     },
-    "ConsejoAcademico": {
+    "consejoAcademico": {
       "type": "richtext"
     }
   }

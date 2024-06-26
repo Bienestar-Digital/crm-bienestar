@@ -4,7 +4,8 @@
   "info": {
     "singularName": "directorio",
     "pluralName": "directorios",
-    "displayName": "Directorio"
+    "displayName": "Directorio",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,22 +13,23 @@
   "pluginOptions": {},
   "attributes": {
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
-    "Area": {
+    "area": {
       "type": "string"
     },
-    "Nombre": {
+    "nombre": {
       "type": "string"
     },
-    "Telefono": {
+    "telefono": {
       "type": "string"
     },
-    "Correo": {
+    "correo": {
       "type": "string"
     }
   }

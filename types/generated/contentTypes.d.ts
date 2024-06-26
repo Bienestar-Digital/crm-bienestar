@@ -870,16 +870,17 @@ export interface ApiDirectorioDirectorio extends Schema.CollectionType {
     singularName: 'directorio';
     pluralName: 'directorios';
     displayName: 'Directorio';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     image: Attribute.Media<'images'>;
-    Area: Attribute.String;
-    Nombre: Attribute.String;
-    Telefono: Attribute.String;
-    Correo: Attribute.String;
+    area: Attribute.String;
+    nombre: Attribute.String;
+    telefono: Attribute.String;
+    correo: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1025,22 +1026,22 @@ export interface ApiQuienesSomoQuienesSomo extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
-    Video: Attribute.String;
-    QuienesSomos: Attribute.Text;
-    QueQueremosSer: Attribute.Text;
-    Politicas: Attribute.Text;
-    Principios: Attribute.Text;
-    Estructura: Attribute.Media<'images'>;
+    video: Attribute.String;
+    quienesSomos: Attribute.Text;
+    queQueremosSer: Attribute.Text;
+    politicas: Attribute.Text;
+    principios: Attribute.Text;
+    estructura: Attribute.Media<'images'>;
     directorios: Attribute.Relation<
       'api::quienes-somo.quienes-somo',
       'oneToMany',
       'api::directorio.directorio'
     >;
     CSU: Attribute.RichText;
-    Rectoria: Attribute.RichText;
+    rectoria: Attribute.RichText;
     CBU: Attribute.RichText;
     DNBU: Attribute.RichText;
-    ConsejoAcademico: Attribute.RichText;
+    consejoAcademico: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

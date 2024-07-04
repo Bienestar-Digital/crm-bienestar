@@ -864,6 +864,41 @@ export interface ApiConvocatoriaConvocatoria extends Schema.CollectionType {
   };
 }
 
+export interface ApiDirectorioDirectorio extends Schema.CollectionType {
+  collectionName: 'directorios';
+  info: {
+    singularName: 'directorio';
+    pluralName: 'directorios';
+    displayName: 'Directorio';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    image: Attribute.Media<'images'>;
+    area: Attribute.String;
+    nombre: Attribute.String;
+    telefono: Attribute.String;
+    correo: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::directorio.directorio',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::directorio.directorio',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiEnPluralEnPlural extends Schema.SingleType {
   collectionName: 'en_plurals';
   info: {
@@ -979,6 +1014,52 @@ export interface ApiNoticiaNoticia extends Schema.CollectionType {
   };
 }
 
+export interface ApiQuienesSomoQuienesSomo extends Schema.SingleType {
+  collectionName: 'quienes_somos';
+  info: {
+    singularName: 'quienes-somo';
+    pluralName: 'quienes-somos';
+    displayName: 'QuienesSomo';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    video: Attribute.String;
+    quienesSomos: Attribute.Text;
+    queQueremosSer: Attribute.Text;
+    politicas: Attribute.Text;
+    principios: Attribute.Text;
+    estructura: Attribute.Media<'images'>;
+    directorios: Attribute.Relation<
+      'api::quienes-somo.quienes-somo',
+      'oneToMany',
+      'api::directorio.directorio'
+    >;
+    CSU: Attribute.RichText;
+    rectoria: Attribute.RichText;
+    CBU: Attribute.RichText;
+    DNBU: Attribute.RichText;
+    consejoAcademico: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::quienes-somo.quienes-somo',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::quienes-somo.quienes-somo',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTagTag extends Schema.CollectionType {
   collectionName: 'tags';
   info: {
@@ -1027,9 +1108,11 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::categoria.categoria': ApiCategoriaCategoria;
       'api::convocatoria.convocatoria': ApiConvocatoriaConvocatoria;
+      'api::directorio.directorio': ApiDirectorioDirectorio;
       'api::en-plural.en-plural': ApiEnPluralEnPlural;
       'api::jardin.jardin': ApiJardinJardin;
       'api::noticia.noticia': ApiNoticiaNoticia;
+      'api::quienes-somo.quienes-somo': ApiQuienesSomoQuienesSomo;
       'api::tag.tag': ApiTagTag;
     }
   }

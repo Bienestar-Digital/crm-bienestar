@@ -1,0 +1,59 @@
+{
+  "kind": "singleType",
+  "collectionName": "quienes_somos",
+  "info": {
+    "singularName": "quienes-somo",
+    "pluralName": "quienes-somos",
+    "displayName": "QuienesSomo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "video": {
+      "type": "string"
+    },
+    "quienesSomos": {
+      "type": "text"
+    },
+    "queQueremosSer": {
+      "type": "text"
+    },
+    "politicas": {
+      "type": "text"
+    },
+    "principios": {
+      "type": "text"
+    },
+    "estructura": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "directorios": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::directorio.directorio"
+    },
+    "CSU": {
+      "type": "richtext"
+    },
+    "rectoria": {
+      "type": "richtext"
+    },
+    "CBU": {
+      "type": "richtext"
+    },
+    "DNBU": {
+      "type": "richtext"
+    },
+    "consejoAcademico": {
+      "type": "richtext"
+    }
+  }
+}
